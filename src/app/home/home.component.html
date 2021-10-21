@@ -1,0 +1,17 @@
+<!-- <button (click)="sendRequest()">Send</button> -->
+
+
+<div class="Main-Card">
+    <div class="card">
+        <input type="number" class="form-Controls" [(ngModel)]="isData" placeholder="Enter Id" />
+        <button (click)="sendRequest()">Send</button>
+    </div>
+</div>
+
+<div class="cards" *ngIf="dataArray.length > 0">
+    <div class="main" *ngFor="let item of dataArray">
+        <label><b>Id :-</b>{{item?.id}}</label>
+        <label><b>Title :-</b>&nbsp; {{item?.title}}</label>
+    </div>
+</div>
+
